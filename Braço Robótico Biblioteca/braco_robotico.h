@@ -1,3 +1,6 @@
+#ifndef BRACO_ROBOTICO_H
+#define BRACO_ROBOTICO_H
+
 void apertarCONFIRMA(simxChar handlerName[], int clientID, int* handler);
 void apertar0(simxChar handlerName[], int clientID, int* handler);
 void apertar1(simxChar handlerName[], int clientID, int* handler);
@@ -11,4 +14,4 @@ void apertar8(simxChar handlerName[], int clientID, int* handler);
 void apertar9(simxChar handlerName[], int clientID, int* handler);
 void resetarPosicao(int clientID, int* handler);
 
-#include "braco_robotico.c"
+#endif // BRACO_ROBOTICO_H
