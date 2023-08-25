@@ -1,5 +1,6 @@
 #include <string.h>
 #include <stdio.h>
+#include "braco_robotico.h"
 
 void apertarCONFIRMA(char handlerName[], int clientID, int* handler) {
 
