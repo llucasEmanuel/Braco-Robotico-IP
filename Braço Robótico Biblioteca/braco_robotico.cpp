@@ -1,7 +1,3 @@
-#include <string.h>
-#include <stdio.h>
-#include "braco_robotico.h"
-
 void apertarCONFIRMA(char handlerName[], int clientID, int* handler) {
 
     simxGetObjectHandle(clientID, handlerName, handler, (simxInt)simx_opmode_oneshot_wait);
@@ -13,13 +9,13 @@ void apertarCONFIRMA(char handlerName[], int clientID, int* handler) {
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(1000);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.8580), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.8200), (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_3");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(1000);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(0.0988), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(0.0958), (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_4");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
@@ -31,7 +27,7 @@ void apertarCONFIRMA(char handlerName[], int clientID, int* handler) {
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(10);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.265), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.258), (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_6");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
@@ -43,7 +39,7 @@ void apertarCONFIRMA(char handlerName[], int clientID, int* handler) {
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     //simxSetJointTargetPosition(clientID, handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(100);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.9193), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.9155), (simxInt)simx_opmode_oneshot_wait);
 }
 
 void apertar0(char handlerName[], int clientID, int* handler) {
@@ -57,13 +53,13 @@ void apertar0(char handlerName[], int clientID, int* handler) {
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(1000);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.8555), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.7995), (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_3");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(1000);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(0.1510), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(0.1110), (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_4");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
@@ -75,7 +71,7 @@ void apertar0(char handlerName[], int clientID, int* handler) {
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(10);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.43), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.3990), (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_6");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
@@ -87,7 +83,7 @@ void apertar0(char handlerName[], int clientID, int* handler) {
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     //simxSetJointTargetPosition(clientID, handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(100);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.8893), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.8793), (simxInt)simx_opmode_oneshot_wait);
 }
 
 void apertar1(simxChar handlerName[], int clientID, int* handler) {
@@ -101,7 +97,7 @@ void apertar1(simxChar handlerName[], int clientID, int* handler) {
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(2000);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.215) * PI, (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.209) * PI, (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_3");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
@@ -147,7 +143,7 @@ void apertar2(char handlerName[], int clientID, int* handler) {
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(1000);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.8085), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.8025), (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_3");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
@@ -174,7 +170,7 @@ void apertar2(char handlerName[], int clientID, int* handler) {
     extApi_sleepMs(100);//simxfloat é a posição, 0 posição inicla 
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)(0.0122), (simxInt)simx_opmode_oneshot_wait);
 
-    strcpy(handlerName, "/base_link_respondable[0]/joint_1/joint_2"); 
+    strcpy(handlerName, "/base_link_respondable[0]/joint_1/joint_2");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     //simxSetJointTargetPosition(clientID, handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(100);//simxfloat é a posição, 0 posição inicla 
@@ -192,7 +188,7 @@ void apertar3(char handlerName[], int clientID, int* handler) {
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(1000);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.815), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.809), (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_3");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
@@ -254,7 +250,7 @@ void apertar4(simxChar handlerName[], int clientID, int* handler) {
     strcat(handlerName, "/joint_5");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
-    extApi_sleepMs(500); 
+    extApi_sleepMs(500);
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)(0.0280), (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_6");
@@ -262,6 +258,8 @@ void apertar4(simxChar handlerName[], int clientID, int* handler) {
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(500);
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)(0.0007), (simxInt)simx_opmode_oneshot_wait);
+
+
 }
 
 void apertar5(char handlerName[], int clientID, int* handler) {
@@ -308,6 +306,7 @@ void apertar5(char handlerName[], int clientID, int* handler) {
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.8779), (simxInt)simx_opmode_oneshot_wait);
 }
 
+
 void apertar6(char handlerName[], int clientID, int* handler) {
 
     simxGetObjectHandle(clientID, handlerName, handler, (simxInt)simx_opmode_oneshot_wait);
@@ -319,7 +318,7 @@ void apertar6(char handlerName[], int clientID, int* handler) {
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(1000);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.7780), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.7720), (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_3");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
@@ -345,7 +344,7 @@ void apertar6(char handlerName[], int clientID, int* handler) {
     extApi_sleepMs(50);//simxfloat é a posição, 0 posição inicla 
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)(0.0132), (simxInt)simx_opmode_oneshot_wait);
 
-    strcpy(handlerName, "/base_link_respondable[0]/joint_1/joint_2"); 
+    strcpy(handlerName, "/base_link_respondable[0]/joint_1/joint_2");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     //simxSetJointTargetPosition(clientID, handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(100);//simxfloat é a posição, 0 posição inicla 
@@ -363,7 +362,7 @@ void apertar7(char handlerName[], int clientID, int* handler) {
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(1000);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.6755), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.6695), (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_3");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
@@ -420,25 +419,26 @@ void apertar8(char handlerName[], int clientID, int* handler) {
     strcat(handlerName, "/joint_4");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
-    
+
     strcat(handlerName, "/joint_5");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait);
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); 
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait);
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0.023 * PI, (simxInt)simx_opmode_oneshot_wait);
 }
 
+
 void apertar9(simxChar handlerName[], int clientID, int* handler) {
-  
+
     simxGetObjectHandle(clientID, handlerName, handler, (simxInt)simx_opmode_oneshot_wait);
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait);
     extApi_sleepMs(2000);
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.3424), (simxInt)simx_opmode_oneshot_wait);
- 
+
     strcat(handlerName, "/joint_2"); //faz a garra se curvar 
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(2000);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.8080), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.8020), (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_3");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
@@ -456,7 +456,7 @@ void apertar9(simxChar handlerName[], int clientID, int* handler) {
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)0, (simxInt)simx_opmode_oneshot_wait); //setar a posição da junta
     extApi_sleepMs(1000);//simxfloat é a posição, 0 posição inicla 
-    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.195), (simxInt)simx_opmode_oneshot_wait);
+    simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.203), (simxInt)simx_opmode_oneshot_wait);
 
     strcat(handlerName, "/joint_6");
     simxGetObjectHandle(clientID, (simxChar*)handlerName, handler, (simxInt)simx_opmode_oneshot_wait); //atualizar a junta q ta mechendo
@@ -470,6 +470,7 @@ void apertar9(simxChar handlerName[], int clientID, int* handler) {
     //extApi_sleepMs(2000);//simxfloat é a posição, 0 posição inicla 
     simxSetJointTargetPosition(clientID, *handler, (simxFloat)(-0.8843), (simxInt)simx_opmode_oneshot_wait);
     //extApi_sleepMs(2000);
+
 }
 
 void resetarPosicao(int clientID, int* handler) {
